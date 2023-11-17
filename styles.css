@@ -7,6 +7,18 @@ body{
   display: flex;
   justify-content: space-between;
 }
+#affiliations{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#about_me{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-inline: 20px;
+}
 
 nav{
   height: 30px;
