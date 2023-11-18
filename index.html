@@ -13,11 +13,10 @@
 
     <div id = "top">
       <nav>
-        <div class = "medium_font"><a href="">About Me</a> </div>|
-        <div class = "medium_font"><a href="">Portfolio</a></div> |
-        <div class = "medium_font"><a href="">Hobbies</a></div>|
-        <div class = "medium_font"><a href="">Resume</a></div> |
-        <div class = "medium_font"><a href="">Contact</a></div>
+        <div class = "medium_font"><a href="#about_me">About Me</a> </div>|
+        <div class = "medium_font"><a href="#portfolio">Portfolio</a></div> |
+        <div class = "medium_font"><a href="#Hobbies">Hobbies</a></div>|
+        <div class = "medium_font"><a href="Contact">Contact</a></div>
       </nav>
 
       <div id = "link_images">
@@ -34,9 +33,9 @@
       <div class = "about_me_details">
         <div class="info">
           <div class = "large_font">Naoroj Farhan</div>
-          <div class = "medium_font">Computer Science student at the University of Toronto</div>
+          <div class = "large_font">Computer Science student at the University of Toronto</div>
 
-          <div class = "small_font">
+          <div class = "medium_font">
             Hello there! I'm Naoroj Farhan, a first year computer science student at the University of Toronto in the Saint George Campus.
             I love mathematics, machine learning, and just generally solving challenging problems in elegant ways. <br> <br>
             Outside of school, you'll likely find me playing the piano, enjoying the struggle of a Chopin etude... <br> <br>
@@ -52,28 +51,78 @@
     <section id = "portfolio">
       <div class = "highlight_font">Portfolio</div>
 
-      <div id="Project 1">
-        <div class = "medium_font">Housing Price Predictor</div>
+      <div id="Project_1">
+        <div class = "large_font"> Project: Housing Price Predictor</div>
+        <div class = "picture_holder">
+          <img src = "images/forwardprop.png" forward propagation algorithm height = 300 width = auto>
+          <img src = "images/backprop.png" back propagation algorithm height = 300 width = auto>
+          <img src = "images/nn_results.png" neural network learning curve height = 300 width = auto>
+        </div>
+        <div class = "small_font">After learning the mathematics behind neural networks, I decided to test my 
+          understanding by coding a neural network from scratch. Here is some of what I did:
+          <ul>
+            <li>Analyzed housing price data and selected relevant features to train the models, using one-hot encoding to
+              transform categorical data where needed</li>
+            <li>Established multivariable linear regression as baseline model and implemented a neural network model from
+              scratch using only the NumPy library</li>
+            <li>Achieved 40-50% reduction in mean-squared error for the neural network from the baseline through
+              hyperparameter tuning of iterations, learning rate, and model architecture</li>
+          </ul>
+          Here is also a high-level summary of forward propagation, back propagation, and gradient descent <br> <br>
+          
+          <b>Forward propagation:</b> say you have an input vector, matrix multiply that vector by the weight matrix in the first layer and then add the bias
+          vector of the first layer. Apply the activation function you want (sigmoid/relu) and you get the vector that the first 
+          layer outputs to the next layer. This iterative process continues until the last layer is reached. Output the last layer <br><br>
+
+          <b>Back propagation:</b> You now have the forward propagation algorithm to predict the cost of a house, or whatever you
+          are using a neural network for, but how accurate is it really? One can use a cost function to determine the accuracy
+          of a model, a common one is mean squared error. Now, forward propagation makes a prediction, and you can use the 
+          average of all the square differences between actual and predicted value to compute the cost of your model. Now, the idea 
+          is to take the derivative of the cost wrt the value that the previous layer's output, take the derivative of the previous 
+          layer's output wrt to the activation function of that layer, and then take the derivative of the activation wrt to weight. 
+          Using chain rule, you can get the derivative (really gradient) of the cost with respect to the weight which tells you the 
+          direction you want to shift the weight. This is because smaller gradients mean you are closer to a local minimum. <br> <br>
+
+          <b>Gradient Descent:</b> This algorithm accumulates all the gradient for weights and biases that each training example gives
+           and applies them all to the current weights and biases of the neural network. Gradient descent is done for some number of 
+           epochs until the neural network is deemed to be sufficiently trained
+        </div>
       </div>
 
-      <div id="Project 2">
-        <div class = "medium_font">Stock Market Data Analysis with Yahoo Finance API</div>
-      </div>
-
-      <div id="Project 3">
-        <div class = "medium_font">Robotic Hand with Arduino</div>
+      <div id="Project_2">
+        <div class = "large_font">Project: Robotic Hand with Arduino</div>
+        <div class = "picture_holder">
+          <img src = "images/hand.png" height = 300px width = auto>
+          <div class = "small_font">
+            After watching Full Metal Alchemist Brotherhood and feeling inspired by the main character Edward Elric, I became curious about the concept of robotic limbs.
+            I wanted to get more experience with Arduino anyways and decided that I might as well try making a prototype. <br><br>
+            
+            I built a model of a hand that used a servo sensor to flex and extend the hand's fingers based on EMG sensor readings from my forearm. To model the hand, I used hinges 
+            for the joints, eye screws and elastic string for the “extensor muscles”, and fishing line and a servo for the “flexor muscles”. Additionally, I bought an EMG sensor 
+            from Amazon and coded the servo to move when the sensor measured above a certain threshold.
+          </div>
+        </div>
       </div>
     </section>
 
     <section id = "Hobbies">
       <div class = "highlight_font">Hobbies</div>
-    </section>
-    <section id = "Resume">
-      <div class = "highlight_font">Resume</div>
-      <img src = "images/resume.png" width = 1000px>
+      <div class = "large_font">Piano (more on the way!)</div>
+      <div class = "medium_font">Attack on Titan Opening 1: Guren no Yumiya</div>
+      <video width="320" height="240" controls>
+        <source src="videos/aotopening.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class = "medium_font">Unravel (Progress)</div>
+      <video width="320" height="240" controls>
+        <source src="videos/unravel.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </section>
     <section id = "Contact">
       <div class = "highlight_font">Contact</div>
+      <a href="mailto:naoroj.farhan@mail.utoronto.com">Email</a>
     </section>
 
 

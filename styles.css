@@ -1,6 +1,11 @@
 body{
   margin: 0;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 #top{
   background-color: rgb(84, 84, 222);
   padding: 20px;
@@ -21,10 +26,6 @@ body{
   flex-direction: row;  
 }
 
-#portfolio{
-
-}
-
 .highlight_font,
 .large_font,
 .medium_font,
@@ -34,7 +35,7 @@ body{
 }
 
 .highlight_font{
-  font-size: 3.0vw;
+  font-size: 4.0vw;
   background-color: rgb(84, 84, 222);
   color: white;
   margin-bottom: 20px;
@@ -42,10 +43,12 @@ body{
 
 .large_font{
   font-size: 3.0vw;
+  margin-bottom: 20px;
+  text-decoration: underline;
 }
 
 .medium_font{
-  font-size: 2.5vw;
+  font-size: 1.8vw;
 }
 .small_font{
   font-size: 1.5vw;
@@ -69,55 +72,24 @@ a{
   height: auto; /* Maintain the aspect ratio */
 }
 
+#Project_1,
+#Project_2,
+#Project_3{
+  display:flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  margin: 30px;
+  background-color: rgb(242, 219, 189);
+}
 
-/*
-body{
+#Project_2{
   display: flex;
   flex-direction: column;
-  background-color: #2B3D5B;
 }
 
-.header {
+.picture_holder{
   display: flex;
   flex-direction: row;
-  background-color: #ffffff;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.other_pages,
-link_images{
-  display: flex;
-  flex-grow: 1;
   gap: 20px;
-  font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
-  margin: 5px;
+  margin-bottom: 20px;
 }
-
-.main {
-  display: flex;
-  flex-direction: row;
-}
-
-
-ul {
-  list-style-type: none;
-}
-
-p {
-  font-size: 24px;
-}
-
-.main img {
-  margin-right: 40px;
-}
-
-h1 {
-  font-size: 60px;
-  font-family:'Times New Roman', Times, serif;
-  align-content: center;
-}
-*/
